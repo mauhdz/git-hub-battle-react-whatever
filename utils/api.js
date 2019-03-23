@@ -2,7 +2,7 @@ var axios=require('axios');
 
 var id='YOUR_ID';
 var sec='YOUR_SECRET_ID';
-var params ='?client_id'+id+'&client_secret'+sec;
+var params ='?client_id='+id+'&client_secret='+sec;
 
 function getProfile(username){
     return axios.get('http://api.github.com/users/'+username+params)
@@ -12,7 +12,7 @@ function getProfile(username){
 }
 
 function getRepos(username){
-    return axios.get('http://api.github.com/users/'+username+'repos'+params+
+    return axios.get('http://api.github.com/users/'+username+'/repos'+params+
     '&per_page=100')
 }
 
@@ -38,7 +38,7 @@ function getUserData(player){
     return axios.all([
         getProfile(player),
         getRepos(player)
-    ]).then(function(){
+    ]).then(function(data){
         var profile=data[0];
         var repos=data[1];
         return{
