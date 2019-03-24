@@ -52,12 +52,12 @@ li {
   margin-bottom: 7px;
 }
 
-.languages {
+.dogs {
   display: flex;
   justify-content: center;
 }
 
-.languages li {
+.dogs li {
   margin: 10px;
   font-weight: bold;
   cursor: pointer;
@@ -130,15 +130,15 @@ li {
   font-weight: 200;
 }
 
-.reset{
-  border:none;
+.reset {
+  border: none;
   background: transparent;
-  color:black;
+  color: #d0021b;
   display: block;
   width: 100%;
   text-align: center;
 }
 
-.reset :hover{
+.reset:hover {
   cursor: pointer;
 }

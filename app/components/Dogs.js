@@ -2,6 +2,7 @@ var React= require('react')
 var ReactDOM= require('react-dom')
 var PropTypes=require('prop-types')
 var api=require('../../utils/api')
+var Loading= require('./Loading')
 
 function SelectDog(props){
     var dogs=["All","Java","Swift", "JavaScript","C++"]
@@ -97,7 +98,7 @@ class Dogs extends React.Component{
                 selectedDog={this.state.selectedDog}
                 onSelect={this.updateDog}/>
                 {!this.state.repos
-                ?<p>Loading</p>
+                ?<Loading/>
                 : <RepoGrid
                 repo={this.state.repos}
             />}
